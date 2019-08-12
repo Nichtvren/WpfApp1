@@ -61,6 +61,7 @@ namespace WpfApp1
                 Button button = new Button();
                 button.Content = book.chapters[i].name;
                 button.Tag = i;
+                button.Style = (Style)Application.Current.Resources["DashboardButtons"];
                 button.Click += new RoutedEventHandler(ChapterScreen);
                 Grid.SetColumn(button, x);
                 Grid.SetRow(button, y);
