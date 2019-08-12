@@ -156,9 +156,33 @@ namespace WpfApp1
             Layout.Children.Add(pageLayoutStackPanel);
             foreach (KeyValuePair<string, object> item in book.chapters[chap].pages[page].data)
             {
-                if (true)
+                TextBox tb;
+                switch (item.Key.Substring(4))
                 {
-
+                    case "PAGENAME":
+                        tb = new TextBox();
+                        tb.Text = (string)item.Value;
+                        tb.IsReadOnly = true;
+                        pageLayoutStackPanel.Children.Add(tb);
+                        break;
+                    case "TITLE":
+                        tb = new TextBox();
+                        tb.Text = (string)item.Value;
+                        tb.IsReadOnly = true;
+                        pageLayoutStackPanel.Children.Add(tb);
+                        break;
+                    case "SUBTITLE":
+                        tb = new TextBox();
+                        tb.Text = (string)item.Value;
+                        tb.IsReadOnly = true;
+                        pageLayoutStackPanel.Children.Add(tb);
+                        break;
+                    case "PARAGRAPH":
+                        tb = new TextBox();
+                        tb.Text = (string)item.Value;
+                        tb.IsReadOnly = true;
+                        pageLayoutStackPanel.Children.Add(tb);
+                        break;
                 }
             }
 
